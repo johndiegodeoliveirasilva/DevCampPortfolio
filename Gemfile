@@ -11,6 +11,8 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.5.2'
 
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -57,3 +59,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# URLs and work with human-friendly strings as if they were numeric ids.
+gem 'friendly_id', '~> 5.4.0'
