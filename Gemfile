@@ -10,8 +10,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.5.2'
-
-
+# DraftPunk allows editing of a draft version of an ActiveRecord model and its associations.
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
