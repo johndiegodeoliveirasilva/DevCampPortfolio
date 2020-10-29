@@ -30,7 +30,7 @@ class PortfoliosController < ApplicationController
     
     respond_to do |format|
       if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
-        format.html { redirect_to portfolios_path, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to portfolios_path, notice: 'Portfolio atualizado com sucesso!!!.' }
         format.json { render :show, status: :ok, location: @portfolio_item }
       else
         format.html { render :edit }
