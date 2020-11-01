@@ -3,6 +3,9 @@
 #
 # Examples:
 #
+Skill.destroy_all
+Blog.destroy_all
+Portfolio.destroy_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 3.times do |topic|
@@ -13,8 +16,8 @@ end
 
 10.times do |blog|
   Blog.create!(
-    title: "My Blog Post #{blog}",
-    body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)." ,
+    title: Faker::Computer.platform,
+    body:Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
     topic_id: Topic.last.id
   )
 end
@@ -34,9 +37,8 @@ puts "5 skills created"
   Portfolio.create!(
      title: "Portfolio title: #{portfolio_item}" ,
      subtitle: "Ruby on Rails",
-     body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)." ,
-     main_image: "http://placehold.it/600x400" ,
-     thumb_image: "http://placehold.it/350x200"
+     body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false) ,
+    
   )
 end
 puts "9 postfolio items created"
@@ -45,7 +47,7 @@ puts "9 postfolio items created"
   Portfolio.create!(
      title: "Portfolio title: #{portfolio_item}" ,
      subtitle: "Angular",
-     body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)." ,
+     body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false) ,
      main_image: "http://placehold.it/600x400" ,
      thumb_image: "http://placehold.it/350x200"
   )
