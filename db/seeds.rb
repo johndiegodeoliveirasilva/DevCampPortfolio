@@ -3,9 +3,11 @@
 #
 # Examples:
 #
+Technology.destroy_all
 Skill.destroy_all
 Blog.destroy_all
 Portfolio.destroy_all
+
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 3.times do |topic|
@@ -47,9 +49,17 @@ puts "9 postfolio items created"
   Portfolio.create!(
      title: "Portfolio title: #{portfolio_item}" ,
      subtitle: "Angular",
-     body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false) ,
+     body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
      main_image: "http://placehold.it/600x400" ,
      thumb_image: "http://placehold.it/350x200"
   )
 end
 puts "9 postfolio items created"
+
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technologies #{technology}"
+  )
+end
+puts "3 technologies creates"
