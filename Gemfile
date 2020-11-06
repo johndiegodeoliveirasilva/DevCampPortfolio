@@ -22,6 +22,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 # This gem is a port of Perl's Data::Faker library that generates fake data.
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+gem 'devise', '~> 4.7', '>= 4.7.3'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
