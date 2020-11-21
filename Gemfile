@@ -63,3 +63,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # URLs and work with human-friendly strings as if they were numeric ids.
 gem 'friendly_id', '~> 5.4.0'
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.5.3'
