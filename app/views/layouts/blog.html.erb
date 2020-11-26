@@ -15,6 +15,7 @@
   </head>
 
   <body>
+
     <div class="container">
       <!--Staring header-->
       <header class="blog-header py-3">
@@ -23,7 +24,7 @@
             <a class="text-muted" href="#">Subscribe</a>
           </div>
           <div class="col-4 text-center">
-            <a class="blog-header-logo text-dark" href="#">Large</a>
+            <a class="blog-header-logo text-dark" href="#">My Blog</a>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="#" aria-label="Search">
@@ -32,14 +33,16 @@
             <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
           </div>
         </div>
+       
       </header>
+      
     <!--End header-->
   <!-- Staring nav-->
      <%= render 'shared/blog_nav' %>
   <!-- End nav-->
       <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
-          <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+          <h1 class="display-4 font-italic">My blog</h1>
           <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
           <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
         </div>
@@ -77,8 +80,10 @@
     </div>
   <!-- start of container and row element -->
     <main role="main" class="container">
+      <div style="font-size: 20px;">
+        <%= link_to 'White a New Blog', new_blog_path if logged_in?(:site_admin) %>
+      </di>
       <div class="row">
-
         <%= yield %>
         
         <!-- start of sidebar -->
@@ -115,7 +120,7 @@
             </ol>
           </div>
         </aside><!-- /.blog-sidebar -->
-
+      </div>
        
         <!-- end of sidebar -->
 
@@ -127,10 +132,8 @@
           </p>
         </footer>
         <!-- end of footer -->
-        <%= render "shared/nav", location: 'bottom' %>
-        
         <%= session_helper("blog") %>
-      </div>
+      
     </main>
   </body>
 </html>
