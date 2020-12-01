@@ -23,7 +23,7 @@ module ApplicationHelper
   [
     {
       url: root_path,
-      tile: "Home"
+      title: "Home"
     },
     {
       url: about_me_path,
