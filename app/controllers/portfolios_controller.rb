@@ -7,9 +7,15 @@ class PortfoliosController < ApplicationController
   end
 
   def sort
+    
     params[:order].each do |key, value|
-      Portfolio.find(value[:id]).update(position: value[:position])
+      sorts = Portfolio.find(value[:id])
+      if sorts.update(position: value[:position])  
+      else
+        puts sorts.errors.full_messages
+      end
     end
+    
     render nothing: true
   end
 
