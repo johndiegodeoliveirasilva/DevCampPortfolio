@@ -41,6 +41,10 @@ module ApplicationHelper
       url: portfolios_path,
       title: "Portfolio"
     },
+    {
+      url: tech_new_path,
+      title: "Tech New"
+    },
   ]
   end
 
