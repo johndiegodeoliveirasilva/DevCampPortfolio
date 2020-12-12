@@ -29,6 +29,9 @@
       <div style="font-size: 20px;">
         <%= link_to 'White a New Blog', new_blog_path if logged_in?(:site_admin) %>
       </di>
+      <span>
+        <%= link_to "Topics", topics_path %>
+      </span>
       <div class="row">
         <%= yield %>
         
