@@ -1,18 +1,13 @@
  
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <div class="text-center">
-      <%= link_to "John Diego", root_path, class: 'navbar-brand' %>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <%= nav_helper 'p-2 text-muted', 'li' %>
-      <%= login_helper 'p-2 text-muted' %>
-    </div>
-  </div>
+  <%= link_to "John Diego", root_path, class: 'navbar-brand' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  
-  
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="navbar-nav">
+      <%= nav_helper  'nav-link', 'li' %>
+      <%= login_helper 'p-2 nav-link' %>
+    </div>
+  </div>
 </nav>
-
