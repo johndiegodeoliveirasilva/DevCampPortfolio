@@ -1,6 +1,13 @@
-<div class="nav-scroller py-1 mb-2">
-  <nav class="nav d-flex justify-content-between">
-    <%= nav_helper 'p-2 text-muted', 'a' %>
-    <%= login_helper "p-2 text-muted"  %>
-  </nav>
-</div>
+ 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to "John Diego", root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="navbar-nav">
+      <%= nav_helper  'nav-link', 'li' %>
+      <%= login_helper 'p-2 nav-link' %>
+    </div>
+  </div>
+</nav>

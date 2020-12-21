@@ -2,7 +2,14 @@
 @import "jquery-ui";
 @import  "gritter";
 
-
+@font-face {
+  font-family: 'Lato';
+  src:font-url('Lato-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  src:font-url('Roboto-Regular.ttf');
+}
 .jumbotron {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -14,6 +21,20 @@
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6
+{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+} 
+body {
+  font-family: 'Lato', sans-serif;
 }
 
 .jumbotron p:last-child {
@@ -60,3 +81,10 @@ footer p {
   padding-top:30px ;
 }
 
+.card {
+  float: left;
+  width: 100%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
