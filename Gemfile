@@ -6,10 +6,10 @@ ruby '2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 # Use postgresql as the database for Active Record
-# gem 'pg', '>= 0.18', '< 2.0'
+gem 'pg', '>= 0.18', '< 2.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.5.2'
+  # gem 'mysql2', '~> 0.5.2'
 # DraftPunk allows editing of a draft version of an ActiveRecord model and its associations.
 
 # Use Puma as the app server
