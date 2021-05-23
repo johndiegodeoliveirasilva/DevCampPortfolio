@@ -1,5 +1,5 @@
 User.create!(
-  email: "test@test.com",
+  email: "johns@test.com",
   password: "asdfasdf",
   password_confirmation: "asdfasdf",
   name: "Admin User",
@@ -8,7 +8,7 @@ User.create!(
 puts "1 Admin user created"
 
 User.create!(
-  email: "test2@test.com",
+  email: "john@test.com",
   password: "asdfasdf",
   password_confirmation: "asdfasdf",
   name: "Regular User",
@@ -140,3 +140,15 @@ puts "9 portfolio items created"
 end
 
 puts "3 technologies created"
+
+
+
+10.times do |ingredient|
+  Ingredient.create!(
+    name: Faker::Food.ingredient,
+    description: Faker::Food.description,
+    price: Faker::Number.decimal(l_digits: 2) 
+  )
+end
+
+puts "10 ingredient created"

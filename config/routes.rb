@@ -24,7 +24,10 @@ Rails.application.routes.draw do
     end
   end
   
-   mount  ActionCable.server => '/cable'
+  resources :dishes
+  resources :ingredients
+
+  mount  ActionCable.server => '/cable'
 
   root to: 'pages#home'
 end

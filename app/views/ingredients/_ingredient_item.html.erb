@@ -1,0 +1,17 @@
+<div class="card mb-4 shadow-sm">
+  <div class="card-header">
+    <h4 class="my-0 font-weight-normal"><%= ingredient_item.name.upcase %></h4>
+  </div>
+  <%= image_tag ingredient_item.avatar, width: '100%' %>
+  <div class="card-body">
+    
+    <h1 class="card-title pricing-card-title">$<%= ingredient_item.price %> <small class="text-muted">/ mo</small></h1>
+    <ul class="list-unstyled mt-3 mb-4">
+      <li><%= ingredient_item.description %></li>
+    </ul>
+    <div class="btn-group" role="group">
+      <%= link_to "Show", ingredient_path(ingredient_item), class: "fixed-bottom btn btn btn-outline-primary"%>
+      <%= link_to "Edit", edit_ingredient_path(ingredient_item), class: "fixed-bottom btn btn-outline-primary" if logged_in?(:site_admin)%>
+    </div>
+  </div>
+</div>

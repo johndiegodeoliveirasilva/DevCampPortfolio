@@ -1,0 +1,20 @@
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @ingredient.avatar.variant(resize_to_limit: [100, 100]) %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @ingredient.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @ingredient.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ingredient.description %>
+</p>
+
+<%= link_to 'Back', ingredients_path %>

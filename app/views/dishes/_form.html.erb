@@ -1,0 +1,24 @@
+<%= form_with model: @dish, local: true do |form| %>
+<p>  
+  <%= form.label :name %>
+  <%= form.text_field :name %> 
+</p>
+
+<p>  
+  <%= form.label :total %>
+  <%= form.text_field :total   %> 
+</p>
+<p>  
+  <%= form.label :value_calorie %>
+  <%= form.text_field :value_calorie %> 
+</p>
+
+<p>  
+  <%= form.label :description %>
+  <%= form.text_field :description %> 
+</p>
+
+<p>
+  <%= form.submit %>
+</p>
+<% end %>
