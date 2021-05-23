@@ -1,4 +1,8 @@
 <%= form_with model: @ingredient, local: true do |form| %>
+<p>  
+  <%= form.label :avatar %>
+  <%= form.file_field :avatar %> 
+</p>
   <p>  
     <%= form.label :name %>
     <%= form.text_field :name %> 

@@ -2,7 +2,9 @@
   <div class="card-header">
     <h4 class="my-0 font-weight-normal"><%= ingredient_item.name.upcase %></h4>
   </div>
+  <%= image_tag ingredient_item.avatar, width: '100%' %>
   <div class="card-body">
+    
     <h1 class="card-title pricing-card-title">$<%= ingredient_item.price %> <small class="text-muted">/ mo</small></h1>
     <ul class="list-unstyled mt-3 mb-4">
       <li><%= ingredient_item.description %></li>
