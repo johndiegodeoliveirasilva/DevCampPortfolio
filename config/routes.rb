@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   end
   
   resources :dishes
+  resources :ingredients
 
   mount  ActionCable.server => '/cable'
 
