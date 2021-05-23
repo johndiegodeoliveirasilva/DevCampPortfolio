@@ -13,5 +13,7 @@
       <%= link_to "Show", ingredient_path(ingredient_item), class: "fixed-bottom btn btn btn-outline-primary"%>
       <%= link_to "Edit", edit_ingredient_path(ingredient_item), class: "fixed-bottom btn btn-outline-primary" if logged_in?(:site_admin)%>
     </div>
+    <br>
+    <small class="text-muted"><%= distance_of_time_in_words(ingredient_item.created_at, Time.now) %> ago </small>
   </div>
 </div>
