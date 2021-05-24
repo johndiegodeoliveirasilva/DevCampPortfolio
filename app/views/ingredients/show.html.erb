@@ -1,20 +1,19 @@
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @ingredient.avatar.variant(resize_to_limit: [100, 100]) %>
-</p>
-<p>
-  <strong>Name:</strong>
-  <%= @ingredient.name %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @ingredient.price %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @ingredient.description %>
-</p>
-
-<%= link_to 'Back', ingredients_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @ingredient.avatar, width: '100%' %>
+    </div>
+    <div class="col-md-5">
+      <h1><%= @ingredient.name %></h1>
+      <hr>
+      <em><%= number_to_currency(@ingredient.price, precision: 2) %></em>
+      <hr>
+      <p><%= @ingredient.description %></p>
+      <% if logged_in?(:site_admin) %>
+        <div>
+          <%= link_to "Edit  Item", edit_ingredient_path(@ingredient), class: 'btn btn-warning'%>
+        </div>
+      <% end %>
+      </div>
+  </div>
+</div>
