@@ -46,6 +46,10 @@ module ApplicationHelper
       url: tech_new_path,
       title: "Tech New"
     },
+    {
+      url: ingredients_path,
+      title: "Ingredient"
+    }
   ]
   end
 
