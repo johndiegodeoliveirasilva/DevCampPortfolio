@@ -64,6 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # URLs and work with human-friendly strings as if they were numeric ids.
 gem 'friendly_id', '~> 5.4.0'
 gem 'jquery-rails'
+gem 'select2-rails'
 gem 'rubocop', '~> 1.13'
 gem 'bootstrap', '~> 4.5.3'
 gem 'devcamp_view_tool', git: 'https://github.com/jordanhudgens/devcamp_view_tool'
@@ -80,6 +81,5 @@ gem 'twitter', '~> 7.0'
 gem 'redis', '~> 4.2', '>= 4.2.5'
 gem 'redcarpet', '~> 3.5', '>= 3.5.1'
 gem 'coderay', '~> 1.1', '>= 1.1.3'
-
 
 ruby "2.7.1"
