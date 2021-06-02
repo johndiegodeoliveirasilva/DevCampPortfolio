@@ -6,15 +6,15 @@ class DishesController < ApplicationController
   end
 
   def show
-    @dish = Dish.find(params[:id])    
+    @dish = Dish.find(params[:id])
   end
 
   def new
-    @dish = Dish.new  
+    @dish = Dish.new
   end
 
   def edit
-    @dish = Dish.find(params[:id])    
+    @dish = Dish.find(params[:id])
   end
 
   def create
@@ -44,7 +44,8 @@ class DishesController < ApplicationController
   end
 
   private
+
   def dish_params
-    params.require(:dish).permit(:name, :description, :total, :value_calorie, :avatar, :ingredient_ids)
+    params.require(:dish).permit(:name, :description, :total, :value_calorie, :avatar, ingredient_ids: [])
   end
 end
