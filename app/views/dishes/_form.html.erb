@@ -1,4 +1,13 @@
 <%= form_with model: @dish, local: true do |form| %>
+
+<%= form.label :ingredient %>
+<%= form.select :ingredient_ids,  Ingredient.all.map{ |p| [p.name, p.id] }, 
+                                  { include_blank: false },
+                                  { class: "simple-example form-control", multiple:true } %>
+<br>
+
+<%= form.label :avatar %>
+<%= form.file_field :avatar %>
 <p>  
   <%= form.label :name %>
   <%= form.text_field :name %> 
