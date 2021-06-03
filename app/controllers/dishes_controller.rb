@@ -1,21 +1,18 @@
 class DishesController < ApplicationController
   layout "dish"
+  before_action :set_dish, only: [:show, :edit, :update, :destroy]
 
   def index
     @dishes = Dish.all
   end
 
-  def show
-    @dish = Dish.find(params[:id])
-  end
+  def show; end
 
   def new
     @dish = Dish.new
   end
 
-  def edit
-    @dish = Dish.find(params[:id])
-  end
+  def edit; end
 
   def create
     @dish = Dish.new(dish_params)
@@ -27,8 +24,6 @@ class DishesController < ApplicationController
   end
 
   def update
-    @dish = Dish.find(params[:id])
-
     if @dish.update(dish_params)
       redirect_to @dish
     else
@@ -37,13 +32,16 @@ class DishesController < ApplicationController
   end
 
   def destroy
-    @dish = Dish.find(params[:id])
     @dish.destroy
 
     redirect_to dishes_path
   end
 
   private
+
+  def set_dish
+    @dish = Dish.find(params[:id])
+  end
 
   def dish_params
     params.require(:dish).permit(:name, :description, :total, :value_calorie, :avatar, ingredient_ids: [])
