@@ -1,33 +1,37 @@
 <%= form_with model: @dish, local: true do |form| %>
 
-<%= form.label :ingredient %>
-<%= form.select :ingredient_ids,  Ingredient.all.map{ |p| [p.name, p.id] }, 
-                                  { include_blank: false },
-                                  { class: "simple-example form-control", multiple:true } %>
+<div class="form-group">
+  <%= form.label :ingredient %>
+  <%= form.select :ingredient_ids,  Ingredient.all.collect{ |p| [p.name, p.id] }, 
+                                    { include_blank: false },
+                                    { class: "select2 form-control",
+                                      multiple: true } %>
+  </div>
+
+  <%= form.label :avatar %>
+  <%= form.file_field :avatar, class: "form-control" %>
+  <p>  
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </p>
+
+  <p>  
+    <%= form.label :total %>
+    <%= form.text_field :total, class: "form-control" %>
+  </p>
+  <p>  
+    <%= form.label :value_calorie %>
+    <%= form.text_field :value_calorie, class: "form-control" %>
+  </p>
+
+  <p>  
+    <%= form.label :description %>
+    <%= form.text_field :description, class: "form-control" %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
 <br>
 
-<%= form.label :avatar %>
-<%= form.file_field :avatar %>
-<p>  
-  <%= form.label :name %>
-  <%= form.text_field :name %> 
-</p>
-
-<p>  
-  <%= form.label :total %>
-  <%= form.text_field :total   %> 
-</p>
-<p>  
-  <%= form.label :value_calorie %>
-  <%= form.text_field :value_calorie %> 
-</p>
-
-<p>  
-  <%= form.label :description %>
-  <%= form.text_field :description %> 
-</p>
-
-<p>
-  <%= form.submit %>
-</p>
 <% end %>
