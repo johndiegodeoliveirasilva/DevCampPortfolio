@@ -10,10 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery3
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require jquery-ui
+//= require select2-full
 //= require activestorage
 //= require html.sortable
 //= require gritter
@@ -21,11 +22,3 @@
 //= require cable
 //= require turbolinks
 //= require_tree .
-//= require select2-full
-
-$(document).ready(function(){
-  $('select#simple-example').select2({
-    placeholder: "Choose a brand",
-    allowClear: true
-  });
-});
