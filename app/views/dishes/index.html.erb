@@ -1,5 +1,5 @@
-<%= render partial: "dish_item", collection: @dishes %>
-<br>
-
-<%= link_to 'New Dish', new_dish_path %>  
-
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <%= render partial: "dish_item", collection: @dishes %>
+  </div>
+</div>

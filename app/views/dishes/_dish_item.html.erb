@@ -1,18 +1,18 @@
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-    <div class="my-3 py-3">
-      <h2 class="display-5"><%= dish_item.name.capitalize %></h2>
-      <p class="lead"><%= dish_item.description%>.</p>
-    </div>
-    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-      <%= image_tag dish_item.avatar %>
-    </div>
+<div class="card mb-4 shadow-sm">
+  <div class="card-header">
+    <h4 class="my-0 font-weight-normal"><%= dish_item.name.capitalize %></h4>
   </div>
-  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-    <div class="my-3 p-3">
-      <h2 class="display-5">Another headline</h2>
-      <p class="lead">And an even wittier subheading.</p>
+  <%= image_tag dish_item.avatar, width: '100%' %>
+  <div class="card-body">
+    <h1 class="card-title pricing-card-title">$<%= dish_item.total %> <small class="text-muted">/ mo</small></h1>
+    <ul class="list-unstyled mt-3 mb-4">
+      <li><%= dish_item.description%>.</li>
+    </ul>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group" role="group">
+        <%= link_to "Show", dish_path(dish_item), class: "fixed-bottom btn btn btn-outline-primary"%>
+        <%= link_to "Edit", edit_dish_path(dish_item), class: "fixed-bottom btn btn-outline-primary" if logged_in?(:site_admin)%>
+      </div>
     </div>
-    <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
   </div>
 </div>
