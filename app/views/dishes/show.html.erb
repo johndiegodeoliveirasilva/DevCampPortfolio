@@ -1,21 +1,16 @@
-<p>
-  <strong>Name:</strong>
-  <%= @dish.name %>
-</p>
-
-<p>
-  <strong>Total:</strong>
-  <%= @dish.total %>
-</p>
-
-<p>
-  <strong>Value Calories:</strong>
-  <%= @dish.value_calorie %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @dish.description %>
-</p>
-
-<%= link_to 'Back', dishes_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @dish.avatar, width: '100%' %>
+    </div>
+    <div class="col-md-5">
+      <h1><%= @dish.name %></h1>
+      <hr>
+      <em><%= number_to_currency(@dish.total, precision: 2) %></em>
+      <hr>
+      <em> <%= @dish.value_calorie %> Kcal</em>
+      <hr>
+      <%= @dish.description %>
+    </div>
+  </div>
+</div>
