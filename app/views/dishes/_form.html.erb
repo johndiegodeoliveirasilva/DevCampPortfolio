@@ -32,6 +32,13 @@
           <%= form.label :description %>
           <%= form.text_field :description, class: "form-control" %>
         </div>
+        <br>
+        <div class="pricing-card-title ">
+          <h1>
+            <%=form.hidden_field :total %>
+          Total: $<%= @dish.total %><small class="text-muted">/ mo</small>
+        </h1>
+        </div>
       </div>
     </div>
     <%= submit_tag "Save Dish", class: "btn btn-primary btn-lg btn-block", data: { disable_with: "Please Wait..." } %>
