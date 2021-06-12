@@ -25,7 +25,11 @@ Rails.application.routes.draw do
   end
   
   resources :dishes
-  resources :ingredients
+  resources :ingredients do
+    collection do
+      get 'sum_ingredients'
+    end
+  end
 
   mount  ActionCable.server => '/cable'
 
