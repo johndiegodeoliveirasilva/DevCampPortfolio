@@ -43,6 +43,17 @@ class IngredientsController < ApplicationController
     redirect_to ingredients_path
   end
 
+  def sum_ingredients
+    if params[:ingredient_ids].present?
+      ingredients = Ingredient.where(id: params[:ingredient_ids])
+      sum = ingredients.sum(&:price)
+      @total = sum + (sum * 0.2)
+      respond_to do |format|
+        format.json { render json: @total }
+      end
+    end
+  end
+
   private
 
   def ingredient_params
