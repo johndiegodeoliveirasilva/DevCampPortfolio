@@ -35,8 +35,9 @@
         <br>
         <div class="pricing-card-title ">
           <h1>
-            <%=form.hidden_field :total %>
-          Total: $<%= @dish.total %><small class="text-muted">/ mo</small>
+          Total: $<%= form.text_field :total, class: "text-muted",
+                                      disabled: true,
+                                      placeholder: "0.0"%><small class="text-muted">/ mo</small>
         </h1>
         </div>
       </div>
@@ -44,3 +45,4 @@
     <%= submit_tag "Save Dish", class: "btn btn-primary btn-lg btn-block", data: { disable_with: "Please Wait..." } %>
   </div>
 <% end %>
+<%= javascript_include_tag 'dishes' %>
