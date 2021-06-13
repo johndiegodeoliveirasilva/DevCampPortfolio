@@ -17,6 +17,8 @@ class User < ApplicationRecord
    
   has_many :comments, dependent: :destroy
 
+  enum active?: { active: true, inactive: false }
+
   def first_name
     self.name.split.first
   end
