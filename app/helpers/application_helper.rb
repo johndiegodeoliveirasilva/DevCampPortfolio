@@ -49,6 +49,10 @@ module ApplicationHelper
     {
       url: ingredients_path,
       title: "Ingredient"
+    },
+    {
+      url: dishes_path,
+      title: "Dish"
     }
   ]
   end
