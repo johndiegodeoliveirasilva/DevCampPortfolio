@@ -17,7 +17,7 @@ module ApplicationHelper
     end 
   end
   def copyright_generator
-     DevcampViewTool::Renderer.copyright 'John Diego', 'All rights reserved'
+    DevcampViewTool::Renderer.copyright 'John Diego', 'All rights reserved'
   end
 
   def nav_items
