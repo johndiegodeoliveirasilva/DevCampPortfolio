@@ -11,3 +11,5 @@ $('.select2').on('change', function (e) {
     })
   })
 })
+
+$('#dish_total').attr("readonly", true);
